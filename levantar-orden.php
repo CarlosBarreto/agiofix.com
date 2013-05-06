@@ -17,7 +17,7 @@
     <body>
         <header class="header">
             <div class="wrap txt-left">
-                <img alt="Logo agiofix" src="img/logo.png">
+                <a href="levantar-orden<?php echo (isset($_GET['en']) ? "?en" : "" ); ?>"><img alt="Logo agiofix" src="img/logo.png"></a>
             </div>
             <div id="header-banda">
                 <div id="header-banda-contenedor">
@@ -370,8 +370,8 @@
             <ul class="span370">
                 <li><div class="siguenos-content span5">
                 <ul class="ul-siguenos float-right">
-                    <li class="clickable"><a class="ico-facebook" href="//www.facebook.com/Agiotech" target="_blank"></a></li>
-                    <li class="clickable"><a class="ico-twitter" href="//twitter.com/Agiotech"></a></li>
+                    <li class="clickable"><a class="ico-facebook" href="https://www.facebook.com/pages/Agiofix/134770403367529?fref=ts" target="_blank"></a></li>
+                    <li class="clickable"><a class="ico-twitter" href="//twitter.com/Agiofix"></a></li>
 
                     <li class="li-title li-sig">SÍGUENOS</li>
                 </ul>                
@@ -381,7 +381,13 @@
             
         </nav>
             </div>
-            <div class="footer"></div>
+            <div class="footer">
+                <ul>
+                    <li class="li-footer"><a href="aviso_de_privacidad<?php echo (isset($_GET['en']) ? "?en" : "" ); ?>"><?php echo (isset($_GET['en']) ? "Notice of Privacy" : "Aviso de Privacidad" ); ?> |</a></li>
+                    <li class="li-footer"><a href="aviso_legal<?php echo (isset($_GET['en']) ? "?en" : "" ); ?>"><?php echo (isset($_GET['en']) ? "Legal Notice" : "Aviso Legal" ); ?> |</a></li>
+                    <li class="li-footer"> Copyrigth &#169; 2012 Agiotech. <?php echo (isset($_GET['en']) ? "All rights reserved" : "Todos los derechos reservados" ); ?></li>
+                </ul>
+            </div>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>

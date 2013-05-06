@@ -23,6 +23,8 @@ body {
     line-height: 1.4;    
 }
 
+body{font:14px Helvetica,Helmet,Freesans,sans-serif;text-align:center;color: #666;}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
@@ -77,6 +79,8 @@ fieldset {
 textarea {
     resize: vertical;
 }
+
+ul{list-style:none}
 
 /* ==========================================================================
    Chrome Frame prompt
@@ -189,8 +193,18 @@ background-color: #F39122;
     background: url(../img/style/bg_footer.jpg);
     width:100%;
     min-width: 855px;
-    height: 58px;
+    height: 31px;
     clear: both;
+	color: #666;
+}
+.footer ul {
+width: 850px;
+margin: 0 auto;
+list-style: none;
+}
+.footer ul  li a{
+text-decoration:none;
+color: #666;
 }
 .footer-header{
     width:100%;
@@ -236,7 +250,7 @@ color: #B1B1B1;
     line-height: 18px;
 }
 .levantar-a {
-width: 213px;
+width: 211px;
 float: left
 ;
 border-right: 1px black solid;
@@ -653,6 +667,7 @@ margin: 0 auto;
 .nav-footer ul li {
 text-align: left;
 }
+.li-footer{float:left;margin-right:10px;font-size:13px;line-height:31px}
 .li-title {
 font-family: BebasNeue,Helvetica,Helmet,Freesans,sans-serif;
 font-size: 19px!important;
@@ -703,6 +718,8 @@ width: 75px;
     left: 10px;
 }
 
+.servicios-content{width:855px;margin:0 auto;text-align:left}
+
 span.form_error{
     position: absolute;
     z-index: 10;
@@ -730,9 +747,7 @@ border-right: 5px solid #cc2828;
 .terminos{
     background:#f2f2f2;
 }
-#aviso-legal{
-    color:#666;
-}
+#aviso-legal{background:#f2f2f2 url(../img/noticias/Fondos/fondo-2.png) bottom;padding:31px 0 62px;background-repeat:repeat no-repeat}
 #aviso-legal h1 {
 padding-bottom: 15px;
 border-bottom: dotted 1px black;
@@ -783,7 +798,8 @@ margin-left: 0;
 .span9-b{width:630px}
 .span8{width:600px}
 .span8-b{width:555px}
-.span7{width:525px}
+/*.span7{width:525px}*/
+.span7{width:465px;};
 .span7-b{width:480px}
 .span6{width:450px}
 .span6-b{width:405px}
