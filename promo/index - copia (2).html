@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+        <style type="text/css">
+            .correo
+            {
+				background: url(./images/PLASTA_CORREO.png) no-repeat;
+                border: none;
+				width: 647px;
+				height: 43px;
+				position: absolute;
+				top: 916px;
+				left: 305px;
+				font-size: 40px;
+				padding-left: 10px;
+            }
+			.btncorreo
+            {
+                border: none;
+				width: 647px;
+				height: 43px;
+				position: absolute;
+				top: 972px;
+				left: 305px;
+            }
+			.codigo
+            {
+				background: url(./images/PLASTA_LETRA.png) no-repeat;
+                border: none;
+				width: 647px;
+				height: 43px;
+				position: absolute;
+				top: 832px;
+				left: 270px;
+				font-size: 40px;
+				padding-left: 10px;
+            }
+
+			.btncodigo
+            {
+                border: none;
+				width: 647px;
+				height: 43px;
+				position: absolute;
+				top: 890px;
+				left: 270px;
+            }
+			#Sharepanel
+            {
+				background: url(./images/FONDO_SHARES.png) no-repeat;
+				width:343px; height:82px;position: absolute;top: 752px;left: 607px;
+            }
+			#Agiologo
+            {
+				background: url(./images/LOGITO.png) no-repeat;
+				width:126px; height:36px;position: absolute;top: 773px;left: 627px;
+            }
+        </style>
+    </head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div>
+	<img border="0" src="./images/pantalla_vacia.jpg" alt="Agiofix promo" width="1140" height="1062" style = "position:absolute;">
+	<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fagiofix.com.mx%2Fpromo%2F&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:228px; height:80px;position: absolute;top: 50px;left: 683px;" allowTransparency="true"></iframe>
+	<div style="position: absolute; top: 584px; left: 501px;">
+		<a id = "showbases" target="_blank">
+				<img src="./images/BASES_N.jpg" onmouseover="this.src='./images/BASES_O.jpg';"
+			  onmouseout="this.src='./images/BASES_N.jpg';"/>
+		</a>
+	</div>
+	
+	<div id="Sharepanel"></div>
+	<div id="Agiologo"></div>
+		<div id="fb-like" class="fb-like" data-href="http://www.agiofix.com.mx" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" style ="position: absolute;top: 765px;left: 803px;"></div>
+		<div style="top:802px;left:802px;position:absolute;">
+			<a name="fb_share" type="button_count" share_url="http://www.agiofix.com.mx/promo" href="http://www.facebook.com/sharer.php" >Share</a>
+			<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+		</div>
+	<form action="" name="myForm">
+		<input type="text" name="correo" value="" class = "correo"><br>
+		<a target="_blank" class="btncorreo">
+				<img src="./images/CLICK_GANAR_N.jpg" onmouseover="this.src='./images/CLICK_GANAR_O.jpg';"
+			  onmouseout="this.src='./images/CLICK_GANAR_N.jpg';"/>
+		</a>
+	</form>
+
+	<a target="_blank">
+    <img id = "basesimg" border="0" src="./images/bases.png" alt="Agiofix promo" width="1140" height="1062" style = "position:absolute; top:0px; display:none" >
+	</a>
+	
+	<div id="premio"style = "display:none;">
+	<a target="_blank">
+		<img id = "premioimg" border="0" src="./images/GENERAL_SIN_BOTON.png" alt="Agiofix promo" width="833" height="472" style = "position:absolute; top:550px; left:162px;" >
+	</a>
+	
+	<form action="" name="myForm2">
+		<input type="text" name="codigo" value="" id = "codigo" class = "codigo"><br>
+		<a href="javascript:validateCupon();" target="_blank" class="btncodigo">
+				<img src="./images/DESCARGAR_CUPON_N.png" onmouseover="this.src='./images/DESCARGAR_CUPON_O.png';"
+			  onmouseout="this.src='./images/DESCARGAR_CUPON_N.png';"/>
+		</a>
+	</form>
+	<div>
+</div>
+
+
+<script type="text/javascript">Modernizr.load();</script>
+<script src='./js/jquery-1.7.2.min.js'></script>
+<script>
+$('#showbases').click(function(){
+				$('#basesimg').toggle();
+				return false;
+		});
+		
+$('#basesimg').click(function(){
+				$('#basesimg').toggle();
+				return false;
+		});
+$('.btncorreo').click(function(){
+				var x=document.forms["myForm"]["correo"].value;
+				var atpos=x.indexOf("@");
+				var dotpos=x.lastIndexOf(".");
+				if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+				  {
+				  alert("Direccion de correo invalida...");
+				  return false;
+				  }
+				  else
+				  {
+				  $('#premio').toggle();
+				  return false;
+				  }
+		});
+$('#premioimg').click(function(){
+	$('#premio').toggle();
+	document.getElementById('codigo').style.backgroundImage = 'url(./images/PLASTA_LETRA.png)'; 
+	return false;
+});
+$('#codigo').click(function(){
+	document.getElementById('codigo').style.backgroundImage = 'url(./images/PLASTA_SINLETRA.png)'; 
+	return false;
+});
+;
+</script>
+</body>
+</html>

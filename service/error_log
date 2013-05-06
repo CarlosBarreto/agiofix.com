@@ -1,0 +1,10 @@
+[02-Apr-2013 18:00:37 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/agiotech/public_html/agiofix.com/service/metodos.php:2) in /home/agiotech/public_html/agiofix.com/service/lib/nusoap.php on line 3744
+[02-Apr-2013 18:00:45 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/agiotech/public_html/agiofix.com/service/metodos.php:2) in /home/agiotech/public_html/agiofix.com/service/lib/nusoap.php on line 3744
+[02-Apr-2013 18:01:33 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/agiotech/public_html/agiofix.com/service/metodos.php:2) in /home/agiotech/public_html/agiofix.com/service/lib/nusoap.php on line 3744
+[02-May-2013 16:25:55 America/New_York] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/agiotech/public_html/agiofix.com/service/metodos.php on line 78
+[02-May-2013 16:25:55 America/New_York] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/agiotech/public_html/agiofix.com/service/metodos.php on line 78
+[02-May-2013 16:25:58 America/New_York] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/agiotech/public_html/agiofix.com/service/metodos.php on line 78
+[02-May-2013 16:25:58 America/New_York] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/agiotech/public_html/agiofix.com/service/metodos.php on line 78
+[02-May-2013 16:27:01 America/New_York] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/agiotech/public_html/agiofix.com/service/metodos.php on line 78
+[02-May-2013 16:28:41 America/New_York] PHP Parse error:  syntax error, unexpected $end, expecting '`' in /home/agiotech/public_html/agiofix.com/service/metodos.php on line 88
+[02-May-2013 16:28:46 America/New_York] PHP Parse error:  syntax error, unexpected $end, expecting '`' in /home/agiotech/public_html/agiofix.com/service/metodos.php on line 88

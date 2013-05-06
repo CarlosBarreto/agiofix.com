@@ -1,0 +1,997 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;    
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*@font-face{font-family:'HelveticaBlackCondensed';src:url('helvetica.woff') format('woff')}*/
+@font-face{font-family:"BebasNeue";src:url("BebasNeue/BebasNeue-webfont.eot");
+src:url("BebasNeue/BebasNeue-webfont.eot?#iefix")format("embedded-opentype"),
+url("BebasNeue/BebasNeue-webfont.woff") format("woff"),
+url("BebasNeue/BebasNeue-webfont.ttf") format("truetype"),
+url("BebasNeue/BebasNeue-webfont.svg#BebasNeue") format("svg");
+font-weight:normal;font-style:normal}
+html{
+        min-height: 100%;
+        height: 100%;
+}
+body{    
+    text-align: center;
+    clear: both;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+.wrap{
+    width:855px;
+    margin: 0 auto;    
+}
+.bgcolor-base{
+background-color: #F39122;
+}
+.txt-left{
+    text-align: left;
+}
+.header{
+    background: url(../img/style/bg_header.jpg);
+    width:100%;
+    min-width: 855px;
+    height: 127px;
+}
+.main-screen{
+    background-color:#F39122;
+    height: 100%;
+    width: 100%;
+    min-width: 855px;
+    text-align: center;
+    box-shadow: 0 5px 7px 5px black;
+    margin-top: -37px;
+}
+.principal-screen{
+    height: 100%;
+    width: 100%;
+    min-width: 855px;
+    background:url(../img/style/bg_main.jpg);
+}
+.principal-screen .menu-header{
+    background: url(../img/style/principal_header.jpg);
+    width:100%;
+    min-width: 855px;
+    height: 152px;
+    padding-top: 26px;
+}
+.principal-screen .menu-header nav {
+    float: center;
+    height: 79px;
+    display: table;
+    margin-bottom: 18px;
+}
+.principal-screen .menu-header nav ul {
+    vertical-align: middle;
+    display: table-cell;
+    line-height: 33px;
+    padding: 0;
+}
+.principal-screen .menu-header nav ul li {
+    font-size: 52px;
+    padding: 25px 0 15px 30px;
+    margin: 0;
+    display: inline;
+    font-family: BebasNeue,Helvetica,Helmet,Freesans,sans-serif;
+    font-weight: 400;
+    text-shadow: 0 1px transparent,0 1px white,1px 0 transparent,0 -1px transparent;
+    float: left;
+    text-align: left;
+}
+.principal-screen .menu-header nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+.principal-screen .menu-header nav ul li:first-child {
+    margin-right: 0;
+    padding-left: 0;
+}
+.principal-screen .menu-header nav ul li:last-child {
+    border-right: 0
+}
+.principal-screen .menu-header p{
+    color:#666;
+    text-align: left;
+}
+.footer{
+    background: url(../img/style/bg_footer.jpg);
+    width:100%;
+    min-width: 855px;
+    height: 58px;
+    clear: both;
+}
+.footer-header{
+    width:100%;
+    min-width: 855px;
+    height: 40px;
+    box-shadow: 0 5px 7px 5px black;
+    border-top: solid #fff 5px;
+}
+.footer-links{
+    background: url(../img/style/bg_footer2.jpg);
+    width:100%;
+    min-width: 855px;
+    height: 144px;
+    clear:both;
+    box-shadow: 0 5px 20px 6px black;
+}
+.orden-pasos{
+    box-shadow: inset 0 0px 15px black;
+    height: 196px;
+}
+.orden-select {
+border-top: dotted 1px black;
+border-right: dotted 1px black;
+color: #666;
+}
+.orden-noselect {
+border-bottom: dotted 1px black;
+border-right: dotted 1px black;
+color: #B1B1B1;
+}
+
+#levantar_orden header{
+    min-width: 855px;
+    margin: 0 auto;
+    text-align: left;
+    background: url(../img/style/bg_pasos.jpg);
+    width: 100%;
+    height: 197px;
+}
+#levantar_orden header p{
+    color:#fff;
+    margin-top: 16px;  padding-right: 15px;
+    line-height: 18px;
+}
+.levantar-a {
+width: 213px;
+float: left
+;
+border-right: 1px black solid;
+}
+.levantar-b {
+width: 214px;
+border-right: 1px black solid;
+float: left
+}
+.levantar-c {
+width: 212px;
+border-right: 1px black solid;
+float: left
+}
+.levantar-f1 {
+height: 124px;
+margin-top: 1px;
+}
+.levantar-f2 {
+height: 69px;
+border-top: 1px black solid;
+}
+#levantar_orden h2 {
+float: left;
+width: 50px;
+text-align: center;
+font-family: BebasNeue,HelveticaBlackCondensed,Helvetica,Helmet,Freesans,sans-serif;
+font-weight: 400;
+font-size: 25px;
+margin-top: 16px;
+height: 100%;
+color: #666;
+}
+#form_levantar_orden{
+    padding: 35px 0;
+    
+    color: #666;
+}
+#form_levantar_orden div label:first-child {
+margin-left: 0;
+padding: 0;
+text-align: left;
+}
+#form_levantar_orden label {
+line-height: 26px;
+text-align: center;
+cursor: default;
+}
+#form_levantar_orden a{
+    color: #666;
+    text-decoration:none;
+}
+#form_levantar_orden a:visited {
+color: #666;
+}
+#form_levantar_orden input,#form_levantar_orden select {
+border: 1px solid #333;
+margin-bottom: 8px;
+height: 26px;
+background-color: #474747;
+box-shadow: 0 2px -2px 1px white;
+color: #bdbdbd;
+border-left: none;
+border-right: 0;
+}
+#form_levantar_orden select {
+height: 30px;
+border: 1px solid #333;
+}
+#form_levantar_orden textarea {
+border: 1px solid #333;
+background: #474747;
+resize: none;
+box-shadow: 0 2px -2px 1px #fff;
+color: #bdbdbd;
+height: 100px;
+overflow: auto;
+/*width: 774px;*/
+}
+.send{
+    width: 143px;
+    height: 61px!important;
+    background: url(../img/style/boton-enviar-solicitud.png) transparent !important;
+    border: 0!important;
+    float: right;
+    margin-top: -32px;
+    position: relative;
+    z-index: 9999;
+    box-shadow: none!important;
+}
+
+#seguimiento header{
+    height:197px;
+    background:#F39122;
+    width:100%;
+    min-width: 855px;
+        
+    box-shadow: inset 0 0px 15px black;
+}
+#seguimiento-codigo {
+    padding-top: 63px;
+}
+#seguimiento-codigo input[type="text"] {
+height: 70px;
+border: 1px solid #333;
+background: #474747;
+box-shadow: 0 2px -2px 1px gray;
+color: #BDBDBD;
+font-family: BebasNeue,Helvetica;
+font-size: 30px;
+text-align: center;
+}
+#seguimiento-codigo h2 {
+font-family: BebasNeue,Helvetica;
+font-size: 30px;
+color: white;
+line-height: 74px;
+font-weight: 400;
+margin: 0;
+}
+#seguimiento-codigo input[type="submit"] {
+height: 74px;
+margin-left: 25px;
+border: 0;
+color: white;
+background:#474747;
+box-shadow: inset 0 0 24px #333;
+}
+#seguimiento-codigo input[type="submit"]:hover{
+background:#666;
+} 
+.orden-point {
+padding: 35px 0 125px;
+min-height: 300px;
+}
+#seguimiento-estado {
+font-family: BebasNeue,Helvetica;
+margin-top: 7px;
+color: #414141;
+}
+#seguimiento-estado hgroup {
+height: 42px;
+margin-bottom: 32px;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpi8vX1/Q/CDDBw5syZ/yAM4wMEGADCZAqVq1kgQAAAAABJRU5ErkJggg==);
+background-repeat: repeat-x;
+background-position: bottom;
+}
+#seguimiento-estado h2 {
+font-size: 35px;
+font-weight: 400;
+margin: 0;
+}
+#seguimiento-estado h3 {
+font-weight: 400;
+color: white;
+font-size: 25px;
+line-height: 42px;
+margin: 0;
+}
+#seguimiento-etiquetas {
+height: 320px;
+}
+.etiqueta-diag {
+background: url(../img/style/levantar_orden-06.png) no-repeat center;
+height: 176px;
+}
+.etiqueta-rep {
+background: url(../img/style/levantar_orden-07.png) no-repeat center;
+height: 176px;
+}
+.etiqueta-res {
+background: url(../img/style/levantar_orden-08.png) no-repeat center;
+height: 176px;
+}
+.etiqueta-tran {
+background: url(../img/style/levantar_orden-09.png) no-repeat center;
+height: 176px;
+}
+#seguimiento-etiquetas p {
+text-align: center;
+font-size: 24px;
+margin-top: 10px;
+margin-bottom: 35px;
+}
+#seguimiento-bar-diagnostico {
+width: 196px;
+border: solid 1px black;
+height: 17px;
+box-shadow: 0 2px -2px 1px white;
+background: #666;
+}
+#seguimiento-bar-reparacion {
+width: 228px;
+border: solid 1px black;
+height: 17px;
+box-shadow: 0 2px -2px 1px white;
+border-left: none;
+background: #666;
+}
+#seguimiento-bar-restauracion {
+width: 225px;
+border: solid 1px black;
+height: 17px;
+box-shadow: 0 2px -2px 1px white;
+border-left: none;
+background: #666;
+}
+#seguimiento-bar-transporte {
+width: 197px;
+border: solid 1px black;
+height: 17px;
+box-shadow: 0 2px -2px 1px white;
+border-left: none;
+background: #666;
+}
+#seguimiento-colores {
+text-align: center;
+margin-top: 37px;
+}
+#seguimiento-colores ul {
+margin: 0 auto;
+width: 450px;
+list-style: none;
+}
+#seguimiento-colores li {
+font-size: 18px;
+color: white;
+text-align: center;
+line-height: 13px;
+}
+#seguimiento-colores li:before {
+vertical-align: -2px;
+margin-right: 10px;
+}
+.seg-esra:before {
+content: url(../img/style/levantar_orden-11.jpg)" ";
+}
+.seg-proc:before {
+content: url(../img/style/levantar_orden-12.jpg)" ";
+}
+.seg-fin:before {
+content: url(../img/style/levantar_orden-13.jpg)" ";
+}
+#precios-lista {
+font-family: BebasNeue,Helvetica;
+margin-top: 24px;
+}
+.bg-linea{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpi8vX1/Q/CDDBw5syZ/yAM4wMEGADCZAqVq1kgQAAAAABJRU5ErkJggg==);
+background-repeat: repeat-x;
+}
+#precios-lista ul {
+background-position: top;
+
+list-style: none;
+padding: 0;
+margin: 0;
+}
+#precios-lista li {
+line-height: 58px;
+font-size: 26px;
+color: #474747;
+position: relative;
+background-position: bottom;
+float: none;
+text-align: left;
+}
+#precios-lista li:hover .detalle_globo_content{display:block}
+#precios-lista li span {
+font-family: Helvetica;
+font-size: 14px;
+}
+#precios-lista li b {
+float: right;
+background: #474747;
+line-height: 35px;
+color: white;
+width: 86px;
+text-align: right;
+margin-top: 10px;
+border: 1px solid #333;
+box-shadow: 0 2px -2px 1px white;
+font-weight: 400;
+padding-right: 20px;
+}
+#precios-lista li i {
+float: right;
+font-style: normal;
+font-size: 38px;
+margin-right: 10px;
+text-shadow: 0 1px transparent,0 1px white,1px 0 transparent,0 -1px transparent;
+}
+.detalle_globo_content {
+max-height: 120px;
+overflow: hidden;
+display: none;
+z-index: 1004;
+}
+.detalle_t {
+border-bottom: 10px solid transparent;
+border-top: 10px solid transparent;
+border-left: 10px solid transparent;
+border-right: 10px solid #7E7E7E;
+position: absolute;
+top: 17px;
+right: 487px;
+}
+#precios-lista .detalle_globo {
+width: 315px;
+height: 157px;
+position: absolute;
+background: #CCC;
+border-radius: 9px;
+top: -55px;
+right: 150px;
+overflow-y: auto;
+line-height: 15px;
+font-size: 12px;
+padding: 5px 10px;
+font-family: Helvetica,sans-serif;
+border: 1px solid #7E7E7E;
+box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+z-index: 1001;
+}
+#header-banda {
+height: 39px;
+background: url(../img/style/bg_header2.jpg);
+margin-top: -5px;
+}
+#header-banda-contenedor {
+width: 855px;
+height: 35px;
+margin: 0 auto;
+}
+#header-banda-contenedor p {
+line-height: 35px;
+width: 100%;
+text-align: right;
+margin: 0;
+}
+#banda-telefono {
+width: 169px;
+background: url(../img/style/telefono.png) no-repeat center;
+vertical-align: -7px;
+height: 35px;
+position: relative;
+float: right;
+}
+#banda-email {
+height: 35px;
+width: 31px;
+background: url(../img/style/boton-correo.png) no-repeat center;
+vertical-align: -7px;
+z-index: 1004;
+position: relative;
+float: right;
+}
+#globo-form-email {
+display: none;
+width: 380px;
+height: 298px;
+background: url(../img/style/ventana-contacto-sombra.png) top;
+position: absolute;
+margin-left: 490px;
+margin-top: 25px;
+z-index: 1001;
+}
+#globo-form-email form {
+width: 210px;
+position: absolute;
+top: 86px;
+right: 69px;
+}
+#globo-form-email textarea {
+height: 58px!important;
+}
+#globo-form-email input:not([type="submit"]), #globo-form-email textarea {
+position: relative;
+width: 205px;
+height: 21px;
+margin-bottom: 1px;
+background: transparent;
+border: 0;
+resize: none;
+}
+#globo-form-email input[type="submit"] {
+height: 42px;
+width: 82px;
+background: url(../img/style/boton-enviar-contacto.png);
+border: 0;
+position: relative;
+right: -73px;
+bottom: 3px;
+}
+.form-true {
+position: relative;
+background: url(../img/style/icon-true.png) no-repeat 0 transparent;
+display: none;
+width: 21px;
+height: 21px;
+float: right;
+left: 153px;
+top: -16px;
+}
+.nav-footer {
+width: 850px;
+height: 145px;
+margin: 0 auto;
+}
+.nav-footer ul {
+    padding: 0;
+    margin: 0;
+}
+.nav-footer ul li {
+text-align: left;
+}
+.li-title {
+font-family: BebasNeue,Helvetica,Helmet,Freesans,sans-serif;
+font-size: 19px!important;
+line-height: 19px;
+color:#666;
+}
+.nav-footer ul li a{
+    color:inherit;
+    text-decoration: none;
+} 
+.siguenos-content {
+margin-top: -24px;
+}
+.ul-siguenos li {
+text-align: right!important;
+width: 31px;
+height: 31px;
+float: right;
+}
+.ico-facebook {
+float: right;
+width: 31px;
+height: 31px;
+background-image: url(../img/style/footer-02.jpg);
+position: relative;
+}
+.ico-twitter {
+margin-right: 2px;
+width: 31px;
+height: 31px;
+background-image: url(../img/style/footer-01.jpg);
+z-index: 1004;
+position: relative;
+float: right;
+}
+.ul-siguenos .li-sig {
+line-height: 40px;
+font-size: 21px!important;
+float: right;
+width: auto;
+}
+.ul-siguenos {
+margin: 0!important;
+width: 75px;
+}
+
+.l10{
+    left: 10px;
+}
+
+span.form_error{
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    /*top: -20px;*/
+    font-size: 11px;
+    line-height: 16px;
+    color: #fff;
+    padding: 4px 8px;
+    background-color: #cc2828;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+span.form_error:after {
+content: '';
+display: block;
+position: absolute;
+border: 5px solid transparent;
+bottom: 6px;
+left: -10px;
+border-right: 5px solid #cc2828;
+}
+/**/
+.terminos{
+    background:#f2f2f2;
+}
+#aviso-legal{
+    color:#666;
+}
+#aviso-legal h1 {
+padding-bottom: 15px;
+border-bottom: dotted 1px black;
+margin-bottom: 15px;
+font-family: BebasNeue,Helvetica;
+font-weight: 400;
+font-size: 58px;
+line-height: 68px;
+text-align: left;
+margin-top: 0;
+}
+#aviso-legal .text p {
+text-align: justify;
+margin-bottom: 25px;
+}
+#aviso-legal .text2 {
+border-top: dotted 1px black;
+padding-top: 22px;
+}
+#aviso-legal .text dl dt {
+font-weight: 700;
+text-align: left;
+}
+
+#aviso-legal .text dl dd {
+margin-bottom: 20px;
+}
+/* ================
+==========================================================
+   Helper classes
+   ========================================================================== */
+.float-right {
+float: right;
+}
+[class*="span"] {
+float: left;
+margin-left: 0;
+}
+.span60{width: 60px;}
+.span12{width:900px}
+.span12-b{width:855px}
+.span12-bie{width:861px}
+.span11{width:825px}
+.span11-b{width:780px;}
+.span10{width:750px}
+.span10-b{width:705px}
+.span9{width:675px}
+.span9-b{width:630px}
+.span8{width:600px}
+.span8-b{width:555px}
+.span7{width:525px}
+.span7-b{width:480px}
+.span6{width:450px}
+.span6-b{width:405px}
+.span6-m{margin-left:45px}
+.span5{width:375px}
+.span5-b{width:330px}
+.span5-p{padding-left:45px}
+.span4{width:300px}
+.span4-b{width:255px}
+.span4-a{width:270px}
+.span3{width:225px}
+.span3-b{width:180px}
+.span3-a{width:195px}
+.span2{width:150px}
+.span2-b{width:105px}
+.span2-a{width:120px}
+.span1{width:75px}
+.span1-b{width:30px}
+.span1-a{width:40px}
+.span-m30-left{margin:0 0 0 30px}
+.span-p30-left{padding:0 0 0 30px}
+.span-p45-left{padding:0 0 0 45px}
+.span-m30-right{margin-right:30px}
+.span-m45-left{margin-left:45px}
+.span370{width: 370px;}
+.txt-center{text-align: center;}
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
