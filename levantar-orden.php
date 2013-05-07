@@ -320,7 +320,7 @@
                          <div class="span12-bie" style="padding-top:10px">
                             <label class="span2"><?php echo (isset($_GET['en']) ? "Freight" : "Servicio de Recolección y Entrega" ); ?></label>
                             <select required class="span4" name="flete" placeholder="Seleccionar...">
-                            	<option value="Mostrador"><?php echo (isset($_GET['en']) ? "In Place" : "No Gracias (Entrega en Mostrador)" ); ?></option>
+                                <option value="Mostrador"><?php echo (isset($_GET['en']) ? "In Place" : "No Gracias (Entrega en Mostrador)" ); ?></option>
                                 <option value="Completo (360)"><?php echo (isset($_GET['en']) ? "Complete" : "Servicio 360°(Completo)" ); ?></option>
                                 <option value="Solo Recolección"><?php echo (isset($_GET['en']) ? "Receive Only" : "Solo Recolección" ); ?></option>
                                 <option value="Solo Envío"><?php echo (isset($_GET['en']) ? "Ship Only" : "Solo Entrega" ); ?></option>
@@ -331,7 +331,7 @@
                        <div class="span12-bie" style="padding-top:10px">
                             <label class="span2"><?php echo (isset($_GET['en']) ? "Collection Time" : "Horario Sugerido de Recolección" ); ?></label>
                              <select required class="span4" name="Horario" placeholder="Seleccionar...">
-                            	<option value="9 a 12"><?php echo (isset($_GET['en']) ? "9:00 a.m. to 12:00 p.m." : "De 9:00 a.m. a 12:00 p.m." ); ?></option>
+                                <option value="9 a 12"><?php echo (isset($_GET['en']) ? "9:00 a.m. to 12:00 p.m." : "De 9:00 a.m. a 12:00 p.m." ); ?></option>
                                 <option value="12 a 3"><?php echo (isset($_GET['en']) ? "9:00 a.m. to 12:00 p.m." : "De 12:00 p.m. a 3:00 p.m." ); ?></option>
                                 <option value="3 a 6"><?php echo (isset($_GET['en']) ? "9:00 a.m. to 12:00 p.m." : "De 3:00 p.m. a 6:00 p.m" ); ?></option>
                             </select>
@@ -382,12 +382,12 @@
         </nav>
             </div>
             <div class="footer">
-                <ul>
-                    <li class="li-footer"><a href="aviso_de_privacidad<?php echo (isset($_GET['en']) ? "?en" : "" ); ?>"><?php echo (isset($_GET['en']) ? "Notice of Privacy" : "Aviso de Privacidad" ); ?> |</a></li>
-                    <li class="li-footer"><a href="aviso_legal<?php echo (isset($_GET['en']) ? "?en" : "" ); ?>"><?php echo (isset($_GET['en']) ? "Legal Notice" : "Aviso Legal" ); ?> |</a></li>
-                    <li class="li-footer"> Copyrigth &#169; 2012 Agiotech. <?php echo (isset($_GET['en']) ? "All rights reserved" : "Todos los derechos reservados" ); ?></li>
-                </ul>
-            </div>
+				<ul>
+					<li class="li-footer"><a href="aviso_de_privacidad<?php echo (isset($_GET['en']) ? "?en" : "" ); ?>"><?php echo (isset($_GET['en']) ? "Notice of Privacy" : "Aviso de Privacidad" ); ?> |</a></li>
+					<li class="li-footer"><a href="aviso_legal<?php echo (isset($_GET['en']) ? "?en" : "" ); ?>"><?php echo (isset($_GET['en']) ? "Legal Notice" : "Aviso Legal" ); ?> |</a></li>
+					<li class="li-footer"> Copyrigth &#169; 2012 Agiotech. <?php echo (isset($_GET['en']) ? "All rights reserved" : "Todos los derechos reservados" ); ?></li>
+				</ul>
+			</div>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
