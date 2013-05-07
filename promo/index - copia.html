@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
         <style type="text/css">
             .correo
@@ -58,6 +58,16 @@
         </style>
     </head>
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div>
 	<img border="0" src="./images/pantalla_vacia.jpg" alt="Agiofix promo" width="1140" height="1062" style = "position:absolute;">
 	<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fagiofix.com.mx%2Fpromo%2F&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:228px; height:80px;position: absolute;top: 50px;left: 683px;" allowTransparency="true"></iframe>
@@ -70,7 +80,7 @@
 	
 	<div id="Sharepanel"></div>
 	<div id="Agiologo"></div>
-		<iframe id= "like" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fagiofix.com.mx%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;position: absolute;top: 768px;left: 802px;" allowTransparency="true"></iframe>
+		<div id="fb-like" class="fb-like" data-href="http://www.agiofix.com.mx" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" style ="position: absolute;top: 765px;left: 803px;"></div>
 		<div style="top:802px;left:802px;position:absolute;">
 			<a name="fb_share" type="button_count" share_url="http://www.agiofix.com.mx/promo" href="http://www.facebook.com/sharer.php" >Share</a>
 			<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
@@ -102,6 +112,7 @@
 	<div>
 </div>
 
+
 <script type="text/javascript">Modernizr.load();</script>
 <script src='./js/jquery-1.7.2.min.js'></script>
 <script>
@@ -125,10 +136,25 @@ $('.btncorreo').click(function(){
 				  }
 				  else
 				  {
-				  $('#premio').toggle();
-				  return false;
+				  //revisar si el correo ya ha sido utilizado...
+				   $.ajax({
+						type: "POST",
+						url: "checkMail.php",
+						data:  {json: x},
+						dataType: "json",
+						success: function (msg) {
+							if (msg.success == "valid") {
+								$('#premio').toggle();
+							} else {
+								alert("El correo utilizado ya ha sido registrado... Introduzca otro correo");
+							}
+						}
+					});
+					return false;
+				  
 				  }
 		});
+
 $('#premioimg').click(function(){
 	$('#premio').toggle();
 	document.getElementById('codigo').style.backgroundImage = 'url(./images/PLASTA_LETRA.png)'; 
@@ -138,10 +164,7 @@ $('#codigo').click(function(){
 	document.getElementById('codigo').style.backgroundImage = 'url(./images/PLASTA_SINLETRA.png)'; 
 	return false;
 });
-$('#like').click(function(){
-	alert("Direccion de correo invalida...");
-	return false;
-});
+;
 </script>
 </body>
 </html>
